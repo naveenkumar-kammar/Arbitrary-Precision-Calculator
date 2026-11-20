@@ -53,24 +53,24 @@ The project uses standard C headers including `stdio.h`, `string.h`, and `stdlib
 ## 🏗️ System Architecture
 
 ```text
-                    +---------------------------+
-                    |           main.c          |
-                    | Command-Line Arguments    |
-                    | Input Validation          |
-                    | Sign Handling             |
-                    | Operation Selection       |
-                    +-------------+-------------+
-                                  |
-                    +-------------+---------------+
-                    |                             |
-                    v                             v
-             +--------------+             +----------------+
-             |     apc.c    |             |     apc.h      |
-             | Common Logic |             | Node Structure |
-             | Validation   |             | Prototypes     |
-             | Linked Lists |             | Status Codes   |
-             +------+-------+             +----------------+
-                    |
+                                 +---------------------------+
+                                 |           main.c          |
+                                 | Command-Line Arguments    |
+                                 | Input Validation          |
+                                 | Sign Handling             |
+                                 | Operation Selection       |
+                                 +-------------+-------------+
+                                               |
+                                 +-------------+---------------+
+                                 |                             |
+                                 v                             v
+                          +--------------+             +----------------+
+                          |     apc.c    |             |     apc.h      |
+                          | Common Logic |             | Node Structure |
+                          | Validation   |             | Prototypes     |
+                          | Linked Lists |             | Status Codes   |
+                          +------+-------+             +----------------+
+                                 |
           +-------------+--------------+---------------+
           |             |              |               |
           v             v              v               v
