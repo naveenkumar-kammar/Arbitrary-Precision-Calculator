@@ -107,7 +107,7 @@ The project uses standard C headers including `stdio.h`, `string.h`, and `stdlib
 ```mermaid
 flowchart TD
     A([Program Start]) --> B[Display Calculator Title]
-    B --> C{Exactly 3 User Arguments?}
+    B --> C{Exactly 4 User Arguments?}
     C -->|No| D[Display Usage and Argument Error]
     D --> Z([Program Exit])
     C -->|Yes| E[Validate Operator and Both Operands]
