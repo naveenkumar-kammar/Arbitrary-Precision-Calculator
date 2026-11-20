@@ -54,52 +54,52 @@ The project uses standard C headers including `stdio.h`, `string.h`, and `stdlib
 
 ```text
                     +---------------------------+
-                    |          main.c           |
+                    |           main.c          |
                     | Command-Line Arguments    |
                     | Input Validation          |
-                    | Sign Handling              |
-                    | Operation Selection        |
+                    | Sign Handling             |
+                    | Operation Selection       |
                     +-------------+-------------+
                                   |
-                    +-------------+-------------+
-                    |                           |
-                    v                           v
-             +--------------+             +--------------+
-             |  apc.c       |             |  apc.h       |
-             | Common Logic |             | Node Structure|
-             | Validation   |             | Prototypes    |
-             | Linked Lists |             | Status Codes  |
-             +------+-------+             +--------------+
+                    +-------------+---------------+
+                    |                             |
+                    v                             v
+             +--------------+             +----------------+
+             |     apc.c    |             |     apc.h      |
+             | Common Logic |             | Node Structure |
+             | Validation   |             | Prototypes     |
+             | Linked Lists |             | Status Codes   |
+             +------+-------+             +----------------+
                     |
-          +---------+----------+------------------+
-          |         |          |                  |
-          v         v          v                  v
-    +-----------+ +-----------+ +-----------+ +-----------+
-    |   add.c   | |   sub.c   | |   mul.c   | |   div.c   |
-    | Addition  | |Subtraction| |Multiplica- | | Division  |
-    | Carry     | | Borrow    | |tion        | | Quotient  |
-    | Handling  | | Handling  | |Partial     | | Remainder |
-    +-----+-----+ +-----+-----+ | Products   | +-----+-----+
-          |             |       +------+-----+       |
-          +-------------+--------------+-------------+
-                                        |
-                                        v
-                              +-------------------+
-                              | Result Linked List|
-                              | Quotient /        |
-                              | Remainder Lists   |
-                              +---------+---------+
-                                        |
-                                        v
-                              +-------------------+
-                              | Display Final     |
-                              | Calculation Result|
-                              +-------------------+
+          +-------------+--------------+---------------+
+          |             |              |               |
+          v             v              v               v
+    +-----------+ +-------------+ +----------------+ +------------+
+    |   add.c   | |   sub.c     | |   mul.c        | |   div.c    |
+    | Addition  | | Subtraction | | Multiplication | | Division   |
+    | Carry     | | Borrow      | | Partial        | | Quotient   |
+    |  Handling | |  Handling   | |  Products      | |  Remainder |
+    +-----+-----+ +------+------+ +-------+--------+ +-----+------+
+          |              |                |                |
+          +--------------+-------+--------+----------------+
+                                 |       
+                                 v       
+                       +--------------------+
+                       | Result Linked List |
+                       | Quotient /         |
+                       | Remainder Lists    |
+                       +---------+----------+
+                                 |
+                                 v
+                       +--------------------+
+                       | Display Final      |
+                       | Calculation Result |
+                       +--------------------+
 
-                 Doubly Linked List Node
-                 +----------------------+
-                 | prev | data | next    |
-                 +----------------------+
+                       Doubly Linked List Node
+                       +--------------------+
+                       | prev | data | next |
+                       +--------------------+
 ```
 
 ## 🔄 Program Flow
